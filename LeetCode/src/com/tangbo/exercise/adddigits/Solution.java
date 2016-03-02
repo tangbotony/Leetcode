@@ -1,4 +1,4 @@
-package com.tangbo.exercise.add.digits;
+package com.tangbo.exercise.adddigits;
 /*
  *258. Add Digits My Submissions Question
 	Total Accepted: 73565 Total Submissions: 152967 Difficulty: Easy

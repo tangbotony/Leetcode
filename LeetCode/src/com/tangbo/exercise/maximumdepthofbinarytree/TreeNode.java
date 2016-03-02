@@ -1,4 +1,4 @@
-package maximumdepthofbinarytree;
+package com.tangbo.exercise.maximumdepthofbinarytree;
 /**
  * Definition for a binary tree node.
   */

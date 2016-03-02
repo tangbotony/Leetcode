@@ -1,4 +1,4 @@
-package maximumdepthofbinarytree;
+package com.tangbo.exercise.maximumdepthofbinarytree;
 public class Solution {
 	public int maxDepth(TreeNode root) 
 	{
