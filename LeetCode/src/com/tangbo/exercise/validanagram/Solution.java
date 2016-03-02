@@ -1,8 +1,4 @@
 package com.tangbo.exercise.validanagram;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 	242. Valid Anagram My Submissions Question
 	Total Accepted: 63841 Total Submissions: 155712 Difficulty: Easy
