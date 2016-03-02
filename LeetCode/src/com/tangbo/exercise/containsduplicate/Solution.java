@@ -1,7 +1,6 @@
 package com.tangbo.exercise.containsduplicate;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
 /*
  * 217. Contains Duplicate My Submissions Question
@@ -11,16 +10,10 @@ import java.util.Map;
  */
 public class Solution {
 	public boolean containsDuplicate(int[] nums) {
-		Map<String, Integer> count = new HashMap<>();
+		HashSet<Integer> count = new HashSet<>();
 		for(int i=0;i<nums.length;i++)
-		{
-			if(count.get(nums[i]+"")==null)
-				count.put(nums[i]+"", 1);
-			else
-			{
+			if(!count.add(nums[i]))
 				return true;
-			}
-		}
-		return true;
+		return false;
     }
 }
