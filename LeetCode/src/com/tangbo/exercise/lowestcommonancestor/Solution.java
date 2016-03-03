@@ -39,13 +39,11 @@ public class Solution {
         if(root.val==node.val) 
             return true;
         if(root.left!=null)
-            if(getPathFromRoot2Node(root.left,node,pathArray)==true) {
+            if(getPathFromRoot2Node(root.left,node,pathArray)==true) 
                 return true;
-            }
         if(root.right!=null) 
-            if(getPathFromRoot2Node(root.right,node,pathArray)==true) {
+            if(getPathFromRoot2Node(root.right,node,pathArray)==true)
                 return true;
-            }
         //回溯
         pathArray.remove(pathArray.size() - 1);
         return false;
