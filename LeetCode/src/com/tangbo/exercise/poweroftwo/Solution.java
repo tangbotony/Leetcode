@@ -9,14 +9,11 @@ package com.tangbo.exercise.poweroftwo;
  */
 public class Solution {
     public boolean isPowerOfTwo(int n) {
-    	if(n==0 || n==1)
-    		return false;
-    	while(n>2)
-    		n=n>>1;
-    	if(n==2)
-    		return false;
-    	else
-    		return false;
+    	if (n == 0) return false;
+        while ((n & 0x1) != 0x1) {
+            n >>= 1;
+        }
+        return n == 1;
     }
     public static void main(String[] args) {
 		System.out.println(5>>1);
