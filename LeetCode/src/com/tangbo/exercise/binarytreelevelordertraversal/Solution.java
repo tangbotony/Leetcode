@@ -31,7 +31,7 @@ public class Solution {
     	int leveal =0;
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
     	myLevelOrderBottom(root,leveal,map);
-    	for(int i = leveal;i>=0;i--)
+    	for(int i = map.size()-1;i>=0;i--)
     	{
     		result.add(map.get(i));
     	}
