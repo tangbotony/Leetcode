@@ -1,4 +1,8 @@
 package com.tangbo.exercise.pascalstriangleII;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * 119. Pascal's Triangle II My Submissions Question
 	Total Accepted: 68489 Total Submissions: 216486 Difficulty: Easy
@@ -12,6 +16,7 @@ package com.tangbo.exercise.pascalstriangleII;
 	
 	Subscribe to see which companies asked this question
  */
+
 public class Solution {
 	public List<Integer> getRow(int rowIndex) {  
         List<Integer> list = new ArrayList<Integer> (rowIndex + 1);  
