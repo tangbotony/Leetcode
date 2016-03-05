@@ -15,7 +15,7 @@ package com.tangbo.exercise.removeduplicatesfromsortedarray;
  */
 public class Solution {
 	public int removeDuplicates(int[] nums) {
-		if(nums==null || nums.length==0)
+        if(nums==null || nums.length==0)
             return 0;
         if(nums.length==1)
             return 1;
@@ -31,7 +31,8 @@ public class Solution {
                 }else
                 {
                     nums[index] =  nums[i];
-                    index = i;
+                    currentValue = nums[index];
+                    index++;
                 }
             }else
             {
@@ -40,9 +41,5 @@ public class Solution {
             }
         }
         return index==-1?nums.length:index;
-	}
-	public static void main(String[] args) {
-		int [] a={1,2};
-		System.out.println(new Solution().removeDuplicates(a));
-	}
+    }
 }
