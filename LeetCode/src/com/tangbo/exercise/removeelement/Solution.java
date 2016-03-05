@@ -1,10 +1,5 @@
 package com.tangbo.exercise.removeelement;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
 /*
  * 27. Remove Element My Submissions Question
 	Total Accepted: 104749 Total Submissions: 316777 Difficulty: Easy
@@ -35,12 +30,10 @@ public class Solution {
                     nums[i] = nums[index];
                     nums[index] = val;
                     while(nums[index]==val)
-                    {
                         index--;
-                    }if(index==i)
-                    {
+                    if(index==i)
                         return i++;
-                    }
+                    
                 }
             }
         }
