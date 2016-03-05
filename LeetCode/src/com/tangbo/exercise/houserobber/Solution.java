@@ -20,7 +20,8 @@ public class Solution {
 	 */
 	Map<Integer, Integer> tempMap = new HashMap<Integer,Integer>();
     public int rob(int[] nums) {
-        int result = 0;
+    	if(nums.length == 0)
+    		return 0;
         if(nums.length == 1)
         	return nums[0];
         if(nums.length == 2)
@@ -32,6 +33,6 @@ public class Solution {
         	tempMap.put(i, Math.max(tempMap.get(i-1),tempMap.get(i-2)+nums[i]));
         }
         
-        return result;
+        return tempMap.get(nums.length-1);
     }
 }
