@@ -1,5 +1,5 @@
 package com.tangbo.exercise;
 
+public class Solution {
 
-public class Test {
 }
