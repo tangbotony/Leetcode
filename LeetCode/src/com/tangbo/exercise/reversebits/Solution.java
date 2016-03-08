@@ -1,7 +1,4 @@
 package com.tangbo.exercise.reversebits;
-
-import java.util.Stack;
-
 /*
  * 190. Reverse Bits My Submissions Question
 	Total Accepted: 55197 Total Submissions: 189375 Difficulty: Easy
