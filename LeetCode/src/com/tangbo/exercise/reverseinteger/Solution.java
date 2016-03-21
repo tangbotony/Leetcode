@@ -28,34 +28,32 @@ package com.tangbo.exercise.reverseinteger;
 
  */
 public class Solution {
-	 public int reverse(int x) {
-	        int ret = 0;
-	        int digit = 0;
-	        boolean neg_flag = false;
-	    
-	        if (x < 0) {
-	            neg_flag = true;
-	            x = -1 * x;
-	        }
-	            
-	        while (x != 0) {
-	            digit = x % 10;
-	            if (ret != 0) {
-	                if ((Integer.MAX_VALUE - digit) / ret < 10 ) 
-	                    return 0;
-	                    
-	                if (neg_flag == true) {
-	                    if (-10 < (Integer.MIN_VALUE + digit) / ret)
-	                   return 0;
-	                } 
-	            }
-	            ret = ret * 10 + digit;
-	            x = x / 10;
-	        }
-	        if (neg_flag == true && ret > 0)
-	            ret = -1 * ret; 
-	        return ret;
-	    }
+	public int reverse(int x) {
+		 int result = 0;
+		 boolean isNeg = x > 0 ? false : true;
+		 x = Math.abs(x);
+		 int i = (x+"").length()-1;
+		 while(x!=0)
+		 {
+
+			 if(x % 10>2 && i>=9)
+				 return 0;
+			 int temp = (int)Math.pow(10, i)*(x % 10);
+			 if(isNeg)
+			 {
+				 if((-1*result)!=0 && (-1*result)-Integer.MIN_VALUE<temp)
+					 return 0;
+			 }else
+			 {
+				 if(Integer.MAX_VALUE-result<temp)
+					 return 0;
+			 }
+			 result += temp;
+			 x = x / 10;
+			 i--;
+		 }
+		 return isNeg?(-1)*result:result;
+	 }
 }
 
 
