@@ -1,6 +1,5 @@
 package com.tangbo.exercise.zigzagconversion;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
