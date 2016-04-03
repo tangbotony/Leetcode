@@ -7,22 +7,18 @@ package com.tangbo.exercise.convertsortedarraytobinarysearchtree;
 	Subscribe to see which companies asked this question
  */
 public class Solution {
-	public TreeNode sortedArrayToBST(int[] num) {
-		if (num.length == 0)
-			return null;
- 
-		return sortedArrayToBST(num, 0, num.length - 1);
-	}
- 
-	public TreeNode sortedArrayToBST(int[] num, int start, int end) {
-		if (start > end)
-			return null;
- 
-		int mid = (start + end) / 2;
-		TreeNode root = new TreeNode(num[mid]);
-		root.left = sortedArrayToBST(num, start, mid - 1);
-		root.right = sortedArrayToBST(num, mid + 1, end);
- 
-		return root;
-	}
+    public TreeNode sortedArrayToBST(int[] nums) {
+        if(nums.length==0)
+            return null;
+        return constructBST(nums,0,nums.length-1);
+    }
+    public TreeNode constructBST(int[] nums,int left,int right)
+    {
+        if(right<left)
+            return null;
+        TreeNode node = new TreeNode(nums[(left+right)/2]);
+        node.left = constructBST(nums,left,(left+right)/2-1);
+        node.right = constructBST(nums,(left+right)/2+1,right);
+        return node;
+    }
 }
